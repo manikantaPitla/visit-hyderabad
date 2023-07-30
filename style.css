@@ -1,0 +1,50 @@
+@import url(navigation.css);
+
+
+.section-home-container{
+    flex-grow: 1;
+}
+
+.home-container {
+    background-color: var(--bg-light-white);
+    height: 100%;
+}
+
+.home-image-section {
+    background-image: url("./images/home_page_image.jpg");
+    width: 100vw;
+    height: 60vh;
+    background-size: cover;
+    background-position: bottom center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.home-content-card {
+    background-color: var(--bg-white);
+    width: 90vw;
+    position: absolute;
+    top: 45%;
+}
+
+.home-content-card h1 {
+    font-size: var(--fs-32);
+    font-weight: 500;
+}
+
+.home-content-card p {
+    font-size: var(--fs-14);
+    font-weight: 500;
+}
+
+.home-content-card button {
+    outline: none;
+    border: none;
+    background-color: var(--color-main2);
+    font-size: var(--fs-14);
+    padding: 10px 15px;
+    color: white;
+}
+
+/*-------------------- home container end-------------------- */
