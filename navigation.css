@@ -1,156 +1,149 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
 
 * {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    font-family: "poppins";
-    /* font-family: "work sans"; */
-    scroll-behavior: smooth;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "poppins";
+  /* font-family: "work sans"; */
+  scroll-behavior: smooth;
 }
 
 :root {
-    --color-white: #ffffff;
-    --color-dark: #000000;
-    --color-rgba-white: rgba(255, 255, 255, 0.6);
-    --border-color-rgba-white: rgba(255, 255, 255, 0.8);
-    --color-main-rgba: rgba(239, 35, 60, 0.9);
-    --color-main: rgb(239, 35, 60);
-    --color-main2: #023047;
+  --color-white: #ffffff;
+  --color-dark: #000000;
+  --color-rgba-white: rgba(255, 255, 255, 0.6);
+  --border-color-rgba-white: rgba(255, 255, 255, 0.8);
+  --color-main-rgba: rgba(239, 35, 60, 0.9);
+  --color-main: rgb(239, 35, 60);
+  --color-main2: #023047;
 
-    --bg-white: #ffffff;
-    --bg-dark: #000000;
-    --bg-light-white: #f8f7ff;
+  --bg-white: #ffffff;
+  --bg-dark: #000000;
+  --bg-light-white: #f8f7ff;
 
-    --fs-14: 14px;
-    --fs-16: 16px;
-    --fs-18: 18px;
-    --fs-24: 24px;
-    --fs-32: 32px;
-
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-24: 24px;
+  --fs-32: 32px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-a:hover{
-    text-decoration: none !important;
+a:hover {
+  text-decoration: none !important;
 }
 
-.main-container{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow-y: auto;
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
 }
-
 
 .nav {
-    background-color: var(--bg-white);
-    box-shadow: 0px 0px 3px #252525;
-    z-index: 1;
-    padding: 15px 0px;
+  background-color: var(--bg-white);
+  box-shadow: 0px 0px 3px #252525;
+  z-index: 1;
+  padding: 15px 0px;
 }
 
 .nav-left h1 {
-    color: var(--color-main2);
-    font-weight: bold;
-    font-size: var(--fs-24);
-    cursor: pointer;
+  color: var(--color-main2);
+  font-weight: bold;
+  font-size: var(--fs-24);
+  cursor: pointer;
 }
 
 .nav-links a {
-    color: var(--color-dark);
-    font-size: var(--fs-16);
-    font-weight: 500;
-    padding: 0px 10px;
+  color: var(--color-dark);
+  font-size: var(--fs-16);
+  font-weight: 500;
+  padding: 0px 10px;
 }
 
 .nav-links a:hover {
-    color: var(--color-main2);
-    text-decoration: none;
+  color: var(--color-main2);
+  text-decoration: none;
 }
 
 /* --------nav-end----------- */
 
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-white);
+    min-height: 100vh;
+    width: 0;
+    overflow: hidden;
+    transition: 0.4s;
+    box-shadow: 0px 0px 5px #252525;
+    padding-top: 80px;
+    align-items: center;
+  }
 
-@media screen and (max-width : 768px) {
+  .back-blur {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(5px);
+  }
 
+  .nav-links-open {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 60vw;
+  }
 
-    .nav-links {
-        position: absolute;
-        top: 0;
-        right:0;
-        display: flex;
-        flex-direction: column;
-        background-color: var(--bg-white);
-        min-height: 100vh;
-        width: 0;
-        overflow: hidden;
-        transition: 0.4s;
-        box-shadow: 0px 0px 5px #252525;
-        padding-top: 80px;
-        align-items: center;
-    }
+  .nav-links a {
+    width: 100%;
+    padding: 10px 0px;
+    padding-left: 20px;
+    text-align: center;
+  }
 
-    .back-blur {
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-        left: 0;
-        top: 0;
-        backdrop-filter: blur(5px);
+  .nav-links a:hover {
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+  }
 
-    }
+  .nav-menu-icon i {
+    font-size: 22px;
+    color: var(--bg-dark);
+  }
 
-    .nav-links-open {
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 60vw;
-    }
+  .nav-close-icon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 15px;
+    width: 100px;
+    height: 50px;
+    text-align: right;
+    cursor: pointer;
+  }
 
-    .nav-links a {
-        width: 100%;
-        padding: 10px 0px;
-        padding-left: 20px;
-        text-align: center;
-    }
+  .nav-close-icon i {
+    font-size: var(--fs-16);
+    color: var(--bg-dark);
+    transition: 0.4s;
+  }
 
-    .nav-links a:hover {
-        text-decoration: none;
-        background-color:rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-    }
-
-    .nav-menu-icon i {
-        font-size: 22px;
-        color: var(--bg-dark);
-    }
-
-    .nav-close-icon {
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        padding: 15px;
-        width: 100px;
-        height: 50px;
-        text-align: right;
-        cursor: pointer;
-    }
-
-    .nav-close-icon i {
-
-        font-size: var(--fs-16);
-        color: var(--bg-dark);
-        transition: 0.4s;
-
-    }
-
-    .nav-close-icon span{
-        font-weight: 600;
-        font-size: var(--fs-16);
-    }
+  .nav-close-icon span {
+    font-weight: 600;
+    font-size: var(--fs-16);
+  }
 }
+
 /*-------------------- screen size below 768 end-------------------- */

@@ -16,8 +16,6 @@ function navLinks() {
         
 }
 
-
-
 //close menubar on scroll
 window.onscroll = function() {
     let navLinks = document.getElementById("navLinks");
@@ -53,18 +51,4 @@ const makeRemainingScreensInvisible = (sectionId) => {
     }
   });
 };
-
-
-// let places = document.getElementById("sectionPlacesContainer")
-// let home = document.getElementById("sectionHomeContainer")
-// let exploreBtn = document.getElementById("exploreBtn")
-// places.style.display = "none";
-
-// exploreBtn.onclick = () =>{
-//     if(home.style.display = "block"){
-//         home.style.display = "none";
-//         places.style.display = "block";
-//     }
-
-// }
 
